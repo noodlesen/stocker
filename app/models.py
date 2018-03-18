@@ -25,7 +25,7 @@ class Project(models.Model):
 class Footage(models.Model):
 
     def __str__(self):
-        return self.name + self.filename
+        return str(self.name) + str(self.filename)
 
     name = models.CharField(max_length=50, blank=True, null=True)
     description = models.CharField(max_length=255, blank=True, null=True)
@@ -37,6 +37,7 @@ class Footage(models.Model):
     resolution_x = models.IntegerField(default=4096)
     resolution_y = models.IntegerField(default=2304)
     has_alpha = models.BooleanField(default=False)
+    keywords_raw = models.TextField(blank=True, null=True)
 
 
 class Publication(models.Model):
