@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Project,Footage, Motion, Marketplace, Publication
+from .models import Project,Footage, Motion, Marketplace, Publication, Theme
 
 # Register your models here.
 
@@ -10,3 +10,4 @@ admin.site.register(Footage)
 admin.site.register(Motion)
 admin.site.register(Marketplace)
 admin.site.register(Publication)
+admin.site.register(Theme)
